@@ -27,4 +27,4 @@ jobs:
     - name: Test
       run: dotnet test src --no-build --verbosity normal
     - name: Publish
-      run: dotnet nuget push **/*.nupkg --api-key ${{ secrets.PACKAGE_N2 }} --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push **/*.nupkg --api-key ${{ secrets.PACKAGE_N2 }} --source https://api.nuget.org/v3/index.json --no-symbols true

@@ -4,7 +4,7 @@ namespace N2;
 
 public static class Contracts
 {
-    public static void NotNull<T>([NotNull] T value, string name) where T : class
+    public static void NotNull<T>([NotNull] T? value, string name) where T : class
     {
         if (typeof(T) == typeof(string) && string.IsNullOrEmpty(value as string))
         {
