@@ -8,12 +8,16 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Contracts assertion</Title>
     <Description>Assert incoming or returning values for methods</Description>
-    <PackageLicenseExpression>AFL-3.0</PackageLicenseExpression>
     <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
     <EnableNETAnalyzers>True</EnableNETAnalyzers>
     <AnalysisLevel>latest-recommended</AnalysisLevel>
-    <IncludeSymbols>True</IncludeSymbols>
-    <PackageVersion>1.0.2</PackageVersion>
+    <IncludeSymbols>False</IncludeSymbols>
+    <PackageVersion>1.0.3</PackageVersion>
+    <PackageLicenseExpression>AFL-3.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/gjkaal/n2-contracts</PackageProjectUrl>
+    <PackageId>n2.contracts</PackageId>
+    <Authors>gjkaal</Authors>
+    <PackageType>Dependency</PackageType>
   </PropertyGroup>
 
   <PropertyGroup>
