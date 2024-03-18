@@ -13,6 +13,15 @@
     <EnableNETAnalyzers>True</EnableNETAnalyzers>
     <AnalysisLevel>latest-recommended</AnalysisLevel>
     <IncludeSymbols>True</IncludeSymbols>
+    <PackageVersion>1.0.1</PackageVersion>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="readme.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 
 </Project>

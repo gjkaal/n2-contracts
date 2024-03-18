@@ -6,7 +6,7 @@ namespace N2.Contracts.UnitTests;
 public class ExceptionFactoryTests
 {
     [TestMethod]
-    public void ExceptionFactory_CanCreateExeptions()
+    public void ExceptionFactoryCanCreateExeptions()
     {
         var result = ExceptionFactory.NullValue("name");
         Assert.IsNotNull(result);
