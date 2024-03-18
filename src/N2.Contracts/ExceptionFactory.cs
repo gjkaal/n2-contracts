@@ -16,5 +16,10 @@ public static class ExceptionFactory
     {
         return new ContractException("Value cannot be default", name);
     }
+
+    public static ContractException MinLengthRequired(string name, int length)
+    {
+        return new ContractException($"Value must be at least {length} characters long", name);
+    }
 }
 

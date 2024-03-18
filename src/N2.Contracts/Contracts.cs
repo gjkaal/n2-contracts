@@ -25,5 +25,18 @@ public static class Contracts
             throw ExceptionFactory.DefaultNotAllowed(name);
         }
     }
+
+    public static void MinLength(string? value, int length, string name)
+    {
+        if (string.IsNullOrEmpty(value))
+        {
+            throw ExceptionFactory.NullOrEmptyValue(name);
+        }
+        if (value.Length < length)
+        {
+            throw ExceptionFactory.MinLengthRequired(name, length);
+        }
+    }
+
 }
 
