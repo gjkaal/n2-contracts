@@ -21,34 +21,34 @@ public class ContractTests {
     public void NotNullThrowsExceptionWhenValueIsNull()
     {
         string? value = null;
-        Assert.ThrowsException<ContractException>(() => Contracts.NotNull(value, "name"));
+        Assert.ThrowsException<ContractException>(() => Contracts.Requires(value, "name"));
     }
 
     [TestMethod]
     public void NotNullThrowsExceptionWhenObjectIsNull()
     {
         TestClass? value = null;
-        Assert.ThrowsException<ContractException>(() => Contracts.NotNull(value, "name"));
+        Assert.ThrowsException<ContractException>(() => Contracts.Requires(value, "name"));
     }
 
     [TestMethod]
     public void NotNullDoesNotThrowExceptionWhenObjectIsNotNull()
     {
         TestClass value = new TestClass();
-        Contracts.NotNull(value, "value");
+        Contracts.Requires(value, "value");
         Assert.IsTrue(true);
     }
 
     [TestMethod]
     public void NotNullThrowsExceptionWhenValueIsEmpty()
     {
-        Assert.ThrowsException<ContractException>(() => Contracts.NotNull(string.Empty, "name"));
+        Assert.ThrowsException<ContractException>(() => Contracts.Requires(string.Empty, "name"));
     }
 
     [TestMethod]
     public void NotNullDoesNotThrowExceptionWhenValueIsNotNull()
     {
-        Contracts.NotNull("value", "name");
+        Contracts.Requires("value", "name");
         Assert.IsTrue(true);
     }
 

@@ -21,5 +21,15 @@ public static class ExceptionFactory
     {
         return new ContractException($"Value must be at least {length} characters long", name);
     }
+
+    public static ContractException MaxLengthRequired(string name, int length)
+    {
+        return new ContractException($"Value must be at most {length} characters long", name);
+    }
+
+    public static ContractException ExactLengthRequired(string name, int length)
+    {
+        return new ContractException($"Value must exactly {length} characters long", name);
+    }
 }
 
