@@ -26,7 +26,7 @@ public static class Contracts
         }
     }
 
-    public static void MinLength(string? value, int minLength, string name)
+    public static void MinLength([NotNull] string? value, int minLength, string name)
     {
         if (string.IsNullOrEmpty(value))
         {
@@ -50,7 +50,7 @@ public static class Contracts
         }
     }
 
-    public static void RequireLengthBetween(string? value, int minLength, int maxLength, string name)
+    public static void RequireLengthBetween([NotNull] string? value, int minLength, int maxLength, string name)
     {
         if (string.IsNullOrEmpty(value))
         {
@@ -66,7 +66,7 @@ public static class Contracts
         }
     }
 
-    public static void RequireLength(string? value, int length, string name)
+    public static void RequireLength([NotNull] string? value, int length, string name)
     {
         if (string.IsNullOrEmpty(value))
         {
